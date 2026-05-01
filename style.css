@@ -1,0 +1,166 @@
+header {
+    background-color: darkblue;
+    color: white;
+    padding: 10px;
+}
+
+nav a {
+    color: lightblue;
+    font-weight: bold;
+}
+
+body {
+    font-family: arial;
+    color: black;
+}
+
+.featured-container {
+    display: flex;
+    justify-content: space-around;
+    flex-wrap: nowrap;
+    flex-direction: row;
+    align-items: center;
+    padding: 20px;
+}
+
+.logo img {
+    border: 3px solid navy;
+    border-radius: 10px;
+    padding: 5px;
+}
+
+.logo {
+    transition: transform 0.3s ease;
+}
+
+.logo:hover {
+    transform: translateY(40px) scale(1.2);
+}
+
+table {
+    border: 1px solid black;
+    margin-left: auto;
+    margin-right: auto;
+    border-collapse: collapse;
+}
+
+th, td {
+    border: 1px solid black;
+    padding: 20px;
+    text-align: center;
+}
+
+th {
+    background-color: darkblue;
+    color: white;
+}
+
+.membership {
+    padding-bottom: 80px;
+}
+
+footer {
+    background-color: navy;
+    color: white;
+    position: fixed;
+    left: 0;
+    bottom: 0;
+    width: 100%;
+    text-align: center;
+}
+
+.card {
+    display: grid;
+    grid-template-rows: 200px min-content;
+    padding: 20px;
+    padding-bottom: 40px;
+}
+
+.card:hover {
+    transform: translateY(-40px) scale(1.1);
+}
+
+.card > img {
+    width: 100%;
+    height: 100%;
+    object-fit: cover;
+    border: 5px solid navy;
+}
+
+.grid-container {
+    display: grid;
+    gap: 10px;
+    grid-template-columns: 1fr 1fr 1fr;
+    padding-right: 15px;
+}
+
+.tags {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+}
+
+#contactBtn {
+  position: fixed;
+  bottom: 60px;
+  right: 10px;
+  padding: 15px;
+  background: navy;
+  color: white;
+  border: none;
+  border-radius: 20px;
+  cursor: pointer;
+}
+
+.hidden {
+  display: none;
+}
+
+#contactBox {
+  position: fixed;
+  top: 35%;
+  left: 38%;
+  width: 280px;
+  background: lightgrey;
+  padding: 15px;
+  border-radius: 10px;
+}
+
+@media (max-width: 900px) {
+    .logo img {
+        display: none;
+    }
+    .grid-container {
+        display: none;
+    }
+    .card {
+        display: none;
+    }
+    .card > img {
+        display: none;
+    }
+    .tags {
+        display: none;
+    }
+}
+
+@media (max-width: 600px) {
+    .logo img {
+        display: none;
+    }
+    table {
+        display: none;
+    }
+    .grid-container {
+        display: none;
+    }
+    .card {
+        display: none;
+    }
+    .card > img {
+        display: none;
+    }
+    .tags {
+        display: none;
+    }
+}

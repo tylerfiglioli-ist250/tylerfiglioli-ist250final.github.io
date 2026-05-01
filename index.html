@@ -1,0 +1,155 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Final Project</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+
+    <body>
+    <header>
+        <h1>My Previous and Future Internship Locations</h1>
+        <nav>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="allegheny.html">Allegheny Country Club</a> &nbsp;
+            <a href="longuevue.html">Longue Vue Club</a> &nbsp;
+            <a href="baltimore.html">Baltimore Country Club</a> &nbsp;
+            <a href="oakmont.html">Oakmont Country Club</a> &nbsp;
+        </nav>
+    </header>
+        <main>
+            <section>
+                <h2>Featured Courses</h2>
+                <div class="featured-container">
+                    <div class="logo"><img src="Course Logos/Allegheny.jpeg" alt="course 1" width="200" height="200"></div>
+                    <div class="logo"><img src="Course Logos/Longue Vue.webp" alt="course 2" width="200" heigh="200"></div>
+                    <div class="logo"><img src="Course Logos/BCC good.jpeg" alt="course 3" width="200" heigh="200"></div>
+                    <div class="logo"><img src="Course Logos/Oakmont good.jpg" alt="course 4" width="200" heigh="200"></div>
+                </div>
+            </section>
+            <section>
+                <h2>Pick Your Favorite Logo</h2>
+                <form id="favoriteLogo">
+                    <label for="favoriteInput">What is your favorite course logo?</label><br>
+                    <br>
+                    <input type="text" id="favoriteInput" placeholder="e.g. Oakmont" required><br>
+                    <br>
+                    <button type="submit">Submit</button>
+                </form>
+                <p id="favoriteResult"></p>
+                <script>
+                    form = document.getElementById("favoriteLogo");
+                    result = document.getElementById("favoriteResult");
+                    form.addEventListener ("submit", function(event) {
+                        event.preventDefault();
+                        inputValue = document.getElementById("favoriteInput").value;
+                        result.textContent = ("Your favorite course logo is: " + inputValue);
+                    });
+                </script>
+            </section>
+            </section>
+            <section>
+                <h2>Membership Comparison</h2>
+                <div class="membership">
+                <table>
+                    <tr>
+                        <th>Course Name</th>
+                        <th>Number of Holes at Facility</th>
+                        <th>Membership Types</th>
+                        <th>Number of Members</th>
+                        <th>Cost of Membership</th>
+                    </tr>
+                    <tr>
+                        <td>Allegheny Country Club</td>
+                        <td>18 holes</td>
+                        <td>
+                            <p>Full (golf) Membership</p>
+                            <p>Social Membership</p>
+                            <p>Junior Membership</p>
+                            <p>Family Membership</p>
+                        </td>
+                        <td>445</td>
+                        <td>
+                            <p>$35,000 initiation</p>
+                            <p>$10,000 yearly</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Longue Vue Club</td>
+                        <td>18 holes</td>
+                        <td>
+                            <p>Charter Memberships</p>
+                            <p>Advanced Intermediate Memberships</p>
+                            <p>Intermediate Membership</p>
+                            <p>Social Membership</p>
+                            <p>National Membership</p>
+                        </td>
+                        <td>475</td>
+                        <td>
+                            <p>$30,000 initiation</p>
+                            <p>$10,000 yearly</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Baltimore Country Club</td>
+                        <td>36 holes</td>
+                        <td>
+                            <p>Golf Membership</p>
+                            <p>Social Membership</p>
+                            <p>Junior Membership</p>
+                            <p>National Membership</p>
+                        </td>
+                        <td>5,000</td>
+                        <td>
+                            <p>$60,000 initiation</p>
+                            <p>$15,000 yearly</p>
+                        </td>
+                    </tr>
+                    <tr>
+                        <td>Oakmont Country Club</td>
+                        <td>18 holes</td>
+                        <td>
+                            <p>Regular Membership</p>
+                            <p>National Membership</p>
+                            <p>Spousal Membership</p>
+                            <p>Junior Membership</p>
+                        </td>
+                        <td>835</td>
+                        <td>
+                            <p>$150,000-$200,000 initiation</p>
+                            <p>Monthly fees = $1,250</p>
+                            <p>Annual food & beverage = $2,000</p>
+                        </td>
+                    </tr>
+                </table>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Contact me with more questions about my experiences! | Phone: 724-504-4765 | Email: tmf5761@psu.edu</p>
+        </footer>
+        <button id="contactBtn">Contact Me</button>
+        <div id="contactBox" class="hidden">
+        <h3>Contact Me With Questions</h3>
+        <form id="contactForm">
+            <input type="text" placeholder="Name" required><br><br>
+            <input type="email" placeholder="Email" required><br><br>
+            <textarea placeholder="Message" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+        </div>
+        <script>
+        contactBtn = document.getElementById("contactBtn");
+        contactBox = document.getElementById("contactBox");
+        contactBtn.addEventListener("click", () => {contactBox.classList.toggle("hidden");});
+        document.getElementById("contactForm").addEventListener("submit", function(e) {e.preventDefault();
+        msg = document.getElementById("formMessage");
+        msg.innerText = "Thank You! I will get back to you soon.";
+        msg.style.color = "green";
+        this.reset();
+        });
+        </script>
+    </body>
+</html>

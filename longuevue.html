@@ -1,0 +1,104 @@
+<!DOCTYPE html>
+<html lang="en">
+    <head>
+        <meta charset="UTF-8">
+        <title>Final Project</title>
+        <link rel="stylesheet" href="style.css">
+        <meta name="viewport" content="width=device-width, initial-scale=1">
+    </head>
+    <body>
+    <header>
+        <h1>Longue Vue Club</h1>
+        <nav>
+            <a href="index.html">Home</a> &nbsp;
+            <a href="allegheny.html">Allegheny Country Club</a> &nbsp;
+            <a href="longuevue.html">Longue Vue Golf Club</a> &nbsp;
+            <a href="baltimore.html">Baltimore Country Club</a> &nbsp;
+            <a href="oakmont.html">Oakmont Country Club</a> &nbsp;
+        </nav>
+    </header>
+        <main>
+            <section>
+                <h2>About Longue Vue Club</h2>
+                <p>Longue Vue Club is a historic and highly regarded private club located just outside Pittsburgh, 
+                    Pennsylvania. Established in 1920, it has built a strong reputation for both its championship golf 
+                    course and its welcoming social atmosphere. The course was originally designed by the legendary 
+                    architect Donald Ross and later enhanced by Arnold Palmer, blending classic design elements with 
+                    modern playability. Known for its tree-lined fairways and strategically placed hazards, the course 
+                    offers a challenging yet enjoyable experience for golfers of all skill levels. In addition to golf, 
+                    Longue Vue Club provides amenities such as tennis courts, swimming facilities, and dining options, 
+                    making it a well-rounded destination for recreation and community engagement.</p>
+            </section>
+            <section>
+                <h2>My Internship Responsibilities</h2>
+                <ul>
+                    <li>Actively managed daily tee time booking, event sign-ups and phone calls</li>
+                    <li>Assisted the merchandiser with receiving and display of golf shop inventory</li>
+                    <li>Enforced club rules and regulations such as dress code policy, golf cars, range etiquette and additional rules</li>
+                    <li>Maintained effective working relationships with other golf team members</li>
+                    <li>Organized and developed the Junior Golf Program, which consisted of two summer programs and one PGA Junior League Team</li>
+                    <li>Managed daily and major club events with other professional staff members</li>
+                </ul>
+            </section>
+            <section>
+                <h2>Course Information</h2>
+                <table>
+                    <tr>
+                        <th>Architect</th>
+                        <th>Par</th>
+                        <th>Length</th>
+                        <th>Course Slope/Rating</th>
+                    </tr>
+                    <tr>
+                        <td>Robert White</td>
+                        <td>70</td>
+                        <td>6,688 yards</td>
+                        <td>140/73.4</td>
+                    </tr>
+                </table>
+            </section>
+            <section>
+                <h2>Course Images</h2>
+                <div class="grid-container">
+                    <div class="card">
+                        <img src="Course Images/Longue Vue Clubhouse.jpg" alt="clubhouse">
+                        <p class="tags">Clubhouse Photo</p>
+                    </div>
+                    <div class="card">
+                        <img src="Course Images/Longue Vue hole 4.jpg" alt="hole 4">
+                        <p class="tags">Hole 4</p>
+                    </div>
+                    <div class="card">
+                        <img src="Course Images/Longue Vue hole 15.jpg" alt="hole 15">
+                        <p class="tags">Hole 15</p>
+                    </div>
+                </div>
+            </section>
+        </main>
+        <footer>
+            <p>Contact me with more questions about my experiences! | Phone: 724-504-4765 | Email: tmf5761@psu.edu</p>
+        </footer>
+        <button id="contactBtn">Contact Me</button>
+        <div id="contactBox" class="hidden">
+        <h3>Contact Me With Questions</h3>
+        <form id="contactForm">
+            <input type="text" placeholder="Name" required><br><br>
+            <input type="email" placeholder="Email" required><br><br>
+            <textarea placeholder="Message" required></textarea><br><br>
+            <button type="submit">Send</button>
+        </form>
+        <p id="formMessage"></p>
+        </div>
+        <script>
+        contactBtn = document.getElementById("contactBtn");
+        contactBox = document.getElementById("contactBox");
+        contactBtn.addEventListener("click", () => {contactBox.classList.toggle("hidden");});
+        document.getElementById("contactForm").addEventListener("submit", function(e) {e.preventDefault();
+        msg = document.getElementById("formMessage");
+        msg.innerText = "Thank You! I will get back to you soon.";
+        msg.style.color = "green";
+        this.reset();
+        });
+        </script>
+    </body>
+</html>
